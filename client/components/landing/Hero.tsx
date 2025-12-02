@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Terminal, Code2, Cpu } from "lucide-react";
+import Link from "next/link";
 
 const CodeWindow = () => {
   return (
@@ -97,23 +98,27 @@ export function Hero() {
       </motion.p>
 
       <div className="flex gap-4 mb-16">
+        <Link href="https://github.com/iamdanwi/codesync" target="_blank">
         <motion.button
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-zinc-200 transition-all hover:scale-105 active:scale-95"
+          className="cursor-pointer px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-zinc-200 transition-all hover:scale-105 active:scale-95"
         >
           Join the Waitlist
         </motion.button>
-        <motion.button
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.35 }}
-          className="px-8 py-4 rounded-full bg-zinc-900 border border-zinc-800 text-white font-semibold hover:bg-zinc-800 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
-        >
-          <Code2 className="w-4 h-4" />
-          View on GitHub
-        </motion.button>
+        </Link>
+        <Link href="https://github.com/iamdanwi/codesync" target="_blank">
+          <motion.button
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.35 }}
+            className="cursor-pointer px-8 py-4 rounded-full bg-zinc-900 border border-zinc-800 text-white font-semibold hover:bg-zinc-800 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+          >
+            <Code2 className="w-4 h-4" />
+            View on GitHub
+          </motion.button>
+        </Link>
       </div>
 
       <CodeWindow />
